@@ -1,4 +1,4 @@
-update=Sun 08 Feb 2015 04:20:01 PM EST
+update=Mon 09 Feb 2015 02:21:18 PM EST
 version=1
 last_client=kicad
 [cvpcb]
@@ -106,7 +106,7 @@ ModuleOutlineThickness=0.15
 [schematic_editor]
 version=1
 PageLayoutDescrFile=pagelayout.kicad_wks
-PlotDirectoryName=
+PlotDirectoryName=renders
 SubpartIdSeparator=0
 SubpartFirstId=65
 NetFmtName=
