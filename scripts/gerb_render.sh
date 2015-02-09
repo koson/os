@@ -19,7 +19,7 @@ function render {
 
     optipng output.png -quiet
     mv output.png "renders/$2.png"
-    convert "renders/$2.png" -scale '25%' "renders/$2_small.png"
+    convert "renders/$2.png" -scale '12%' "renders/$2_small.png"
 }
 
 # Only render if either the Gerbers or the script itself has changed
