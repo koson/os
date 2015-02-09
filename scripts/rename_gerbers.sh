@@ -23,7 +23,7 @@ exts_oshpark=(
     '*B_SilkS.g*'   .GBO
     '*Edge_Cuts.g*' .GKO
     '*Eco1_User.g*' .GKO
-    '*.drl'         .XLN
+    '*.drl~*-NPTH.drl'         .XLN
     '*-NPTH.drl'    -NPTH.XLN )
 
 exts_itead_seeed=(
@@ -37,7 +37,7 @@ exts_itead_seeed=(
     '*B_SilkS.g*'   .GBO
     '*Edge_Cuts.g*' .GML
     '*Eco1_User.g*' .GML
-    '*.drl'         .TXT
+    '*.drl~*-NPTH.drl'         .TXT
     '*-NPTH.drl'    -NPTH.TXT )
 
 case "$MANUF" in
