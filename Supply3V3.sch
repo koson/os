@@ -1034,4 +1034,6 @@ Wire Wire Line
 Wire Wire Line
 	3000 2800 3000 3500
 Connection ~ 5400 2800
+Text Notes 4800 950  0    100  ~ 0
+Possible replacements:\nLTC3851EUD
 $EndSCHEMATC

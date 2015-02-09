@@ -1071,4 +1071,6 @@ Wire Wire Line
 	7000 5050 7000 6100
 Wire Wire Line
 	1025 1425 1000 1400
+Text Notes 3550 800  0    100  ~ 0
+Alternatives:\nMAX8546
 $EndSCHEMATC
