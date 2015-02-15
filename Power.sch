@@ -975,4 +975,32 @@ Wire Wire Line
 	10075 825  10100 800 
 Text Notes 700  1700 0    60   ~ 0
 Backplane power supply\n---------------------------------------\nInput: 15 to 25V, 65W\nOutputs:\n 12V, 60W / 5A\n 3V3, 25W / 7.5A\n 3V3, 330mW / 100mA\nCombined output power must not exceed 60W\n\nThe input capacitors are ultra low-impedance types and are\nshared among both high-power supplies.
+$Comp
+L TESTPOINT TP2
+U 1 1 54D981B6
+P 7900 750
+F 0 "TP2" H 8050 900 50  0000 C CNN
+F 1 "12V" H 8050 800 50  0000 C CNN
+F 2 "conn-test:TEST-PTH" H 7900 750 50  0001 C CNN
+F 3 "" H 7900 750 50  0000 C CNN
+	1    7900 750 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7900 750  7900 800 
+Connection ~ 7900 800 
+$Comp
+L TESTPOINT TP1
+U 1 1 54D98400
+P 7850 2350
+F 0 "TP1" H 8000 2500 50  0000 C CNN
+F 1 "3V3" H 8000 2400 50  0000 C CNN
+F 2 "conn-test:TEST-PTH" H 7850 2350 50  0001 C CNN
+F 3 "" H 7850 2350 50  0000 C CNN
+	1    7850 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7850 2350 7850 2400
+Connection ~ 7850 2400
 $EndSCHEMATC
