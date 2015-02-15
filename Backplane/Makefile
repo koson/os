@@ -1,7 +1,7 @@
 PROJECT ?= os-backplane
 
-export SCRIPTROOT=../Common-kicad/scripts
-export GVPROOT=../Common-kicad
+export SCRIPTROOT=../Common-lib/scripts
+export GVPROOT=../Common-lib
 
 .PHONY: all
 
