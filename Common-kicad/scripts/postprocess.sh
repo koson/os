@@ -1,6 +1,6 @@
 #!/usr/bin/zsh
 
-PROJECT=os-backplane
+PROJECT=$1
 
 setopt extended_glob
 

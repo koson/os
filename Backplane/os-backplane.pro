@@ -105,7 +105,7 @@ BoardOutlineThickness=0.09999999999999999
 ModuleOutlineThickness=0.15
 [schematic_editor]
 version=1
-PageLayoutDescrFile=pagelayout.kicad_wks
+PageLayoutDescrFile=../Common-kicad/pagelayout.kicad_wks
 PlotDirectoryName=renders
 SubpartIdSeparator=0
 SubpartFirstId=65
