@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title> Backplane |  OS-1 Oscilloscope Project</title>
+  </head>
+
+  <body>
+
+      <header>
+          <div class="container">
+            <h1><a href="/">OS-1 Oscilloscope Project</a></h1>
+             <h4>Backplane</h4> 
+
+            <section id="downloads">
+            <!--<a href="https://github.com/cpavlina/os/zipball/master" class="btn">Download as .zip</a>
+                <a href="https://github.com/cpavlina/os/tarball/master" class="btn">Download as .tar.gz</a>-->
+            <a href="https://github.com/cpavlina/os" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+            </section>
+          </div>
+      </header>
+
+    <div class="container">
+        <section id="main_content">
+
+            <p>To allow me to develop the OS-1 one piece at a time, and to extend it later,
+the system will be built upon a backplane.</p>
+
+<p><a href="https://github.com/cpavlina/os/raw/master/Backplane/renders/3d-full.png"><img src="https://github.com/cpavlina/os/raw/master/Backplane/renders/3d-small.png" alt="3D render" /></a></p>
+
+<h2 id="slots">Slots</h2>
+
+<p>The seven slots on the PCB are not actually PCI Express, though I am using the
+assigned pins on them in similar ways. Each slot, except for the first, uses a
+PCIe-x4 connector, and has the following on it:</p>
+
+<ul>
+  <li>8-bit parallel LVDS bus for bulk data transfers. This replaces eight independent LVDS serial lanes.</li>
+  <li>SPI bus for general control operations. This replaces the JTAG pins.</li>
+  <li>I2C bus for general control operations and card identification. This replaces the SMBUS pins.</li>
+  <li>12 V power supply for bulk power consumption.</li>
+  <li>3.3 V power supply for general-purpose digital electronics.</li>
+  <li>3.3 V standby power supply for always-on features.</li>
+</ul>
+
+<p>The first slot is a PCIe-x8 connector; the extra pins are used to interface
+with control signals on the other six slots. This is the slot into which the
+CPU will plug.</p>
+
+<h2 id="hardware">Hardware</h2>
+
+<p>Click for PDF:
+<a href="https://github.com/cpavlina/os/blob/master/Backplane/renders/schematic.pdf?raw=true"><img src="https://raw.githubusercontent.com/cpavlina/os/master/Backplane/renders/schematic_small.png" alt="Schematic thumbnail" /></a></p>
+
+<p><a href="https://github.com/cpavlina/os/raw/master/Backplane/renders/render_2l.png"><img src="https://github.com/cpavlina/os/raw/master/Backplane/renders/render_2l_small.png" alt="PCB thumbnail" /></a></p>
+
+
+        </section>
+    </div>
+
+    
+  </body>
+</html>

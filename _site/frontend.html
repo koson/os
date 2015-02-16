@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title> Frontend |  OS-1 Oscilloscope Project</title>
+  </head>
+
+  <body>
+
+      <header>
+          <div class="container">
+            <h1><a href="/">OS-1 Oscilloscope Project</a></h1>
+             <h4>Frontend</h4> 
+
+            <section id="downloads">
+            <!--<a href="https://github.com/cpavlina/os/zipball/master" class="btn">Download as .zip</a>
+                <a href="https://github.com/cpavlina/os/tarball/master" class="btn">Download as .tar.gz</a>-->
+            <a href="https://github.com/cpavlina/os" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+            </section>
+          </div>
+      </header>
+
+    <div class="container">
+        <section id="main_content">
+
+            <p>The OS-1’s frontend is the usual oscilloscope frontend design: a compensated,
+switched attenuator, a switched termination, a switched bypass around an
+AC coupling capacitor, and diode clamps to protect the circuit. This feeds
+a buffer, allowing the following circuitry to be implemented in a more sane,
+low-impedance fashion without piles of compensation.</p>
+
+<p><a href="https://raw.githubusercontent.com/cpavlina/os/master/Frontend/Planning/Attens.png"><img src="https://raw.githubusercontent.com/cpavlina/os/master/Frontend/Planning/Attens.png" alt="Attenuator schematic" /></a></p>
+
+<ul>
+  <li>C<sub>IN</sub> adds to the relatively low capacitance of the input to
+      give the standard 11 – 12 pF input capacitance.</li>
+  <li>R<sub>CIN</sub> damps any resonance formed between C<sub>IN</sub> and
+      any parasitic inductance. Its effect is negligible over most of the
+      bandwidth.</li>
+  <li>R<sub>T</sub> is a 50 Ω parallel termination, switched by K<sub>T</sub>.</li>
+  <li>L<sub>KT</sub> is the parasitic inductance of K<sub>T</sub>, which actually works
+      in our favor. It increases the termination’s impedance as the other,
+      capacitive impedance decreases, keeping the input impedance nicely matched up
+      to around 150 MHz.</li>
+  <li>R<sub>ST</sub> forms a series termination on the signal, impeding large
+      currents on sharp edges and preventing them from ringing with parasitics.
+      This causes a bit of response rolloff, well past the planned bandwidth.</li>
+  <li>K<sub>A</sub> bypasses the 40 dB attenuator for small signals.</li>
+  <li>R<sub>A1</sub> and the parallel combination of R<sub>A2</sub>, R<sub>IZ1</sub>,
+      and R<sub>IZ2</sub> form the main voltage divider. The attenuation is 40 dB and
+      the input impedance is 1 MΩ.</li>
+  <li>Over most of the frequency range, damping resistors are used in series with the
+      compensation capacitors to prevent ringing. This limits the bandwidth of the
+      compensation to near the point where the capacitive and resistive impedances
+      are equal, so a stacked configuration is used with decreasing capacitances and
+      resistances as the frequency becomes higher:
+    <ul>
+      <li>R<sub>CM1</sub>, C<sub>CM1</sub>, R<sub>CM2</sub>, and C<sub>CM2</sub>
+          compensate the attenuator at midrange frequencies, up to about 11 MHz.</li>
+      <li>R<sub>CH1</sub>, C<sub>CH1</sub>, R<sub>CH2</sub>, and C<sub>CH2</sub>
+          compensate the attenuator at high frequencies, up to about 390 MHz (well
+          past the bandwidth).</li>
+      <li>C<sub>Cstray</sub> compensates for the small amount of stray capacitance
+          across the attenuator, which could otherwise cause significant variation
+          at the upper limit of the bandwidth due to the high impedances involved.</li>
+    </ul>
+  </li>
+  <li>C<sub>AC</sub> is the AC coupling capacitor, bypassed by K<sub>AC</sub> for
+      DC-coupled mode.</li>
+  <li>R<sub>IZ1</sub> and R<sub>IZ2</sub> define the DC input impedance (they are
+      parallel-equivalent to 1 MΩ). Note that they are split across C<sub>AC</sub>.
+      This is because some resistance is needed on either side of it, for two reasons:
+      on the inward side to define the DC offset when AC-coupled, and on the outward side
+      to allow 9M/1M divider probes to divide their DC component when AC-coupled
+      (allowing high voltages to be probed without risking damage to C<sub>AC</sub>).</li>
+  <li>R<sub>prot</sub> blocks high voltage when it is clamped by the diodes.</li>
+  <li>C<sub>pbyp</sub> bypasses R<sub>prot</sub> at high frequencies, compensating for
+      the capacitance on the inward side.</li>
+  <li>R<sub>pbyp</sub> limits a response peaking caused by the dramatic difference
+      in impedances below and above the cutoff point of C<sub>pbyp</sub>/R<sub>prot</sub>.</li>
+  <li>R<sub>S</sub> is a series input resistor to the op amp. It serves two purposes.
+      First, it further limits the current into the op amp from any fast spikes that
+      are not quickly clamped. Second, by forming an RC filter with the stray capacitance
+      at the input, it compensates for a peak in the amplifier’s natural response.
+      (This peak is shown in the <a href="http://www.analog.com/media/en/technical-documentation/data-sheets/ADA4817-1_4817-2.pdf">datasheet</a>;
+      it’s not an artifact of improper application or an amplifier that is not unity gain-stable.)</li>
+  <li>D3, D4, D5, and D6 form a clamping network to limit the input voltage. The voltage
+      is clamped at a lower level on the positive side to match the different positive
+      and negative common-mode input limits of the amplifier.</li>
+  <li>D1, D2 and R<sub>LIN</sub> form a clamp linearizing network. For reasonable
+      input amplitudes, R<sub>LIN</sub> will drive the lower end of D1 and D2 to
+      a voltage equal to the input voltage, so the clamping network will draw no
+      current and will not distort the signal. As the signal rises, the clamping
+      network will first clamp this driven node, which will then allow D1 and D2
+      to switch on.</li>
+  <li>R<sub>out</sub> is an output series termination resistor, which prevents response
+      peaking and possible oscillation in the amplifier due to stray capacitance.</li>
+  <li>The amplifier itself is an <a href="http://www.analog.com/media/en/technical-documentation/data-sheets/ADA4817-1_4817-2.pdf">Analog Devices ADA4817-1</a>,
+      a “FastFET” op amp with both very high input impedance and very high bandwidth. It is
+      one of the few single op amps that could function as the input buffer all by itself!</li>
+</ul>
+
+
+        </section>
+    </div>
+
+    
+  </body>
+</html>
