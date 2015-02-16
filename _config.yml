@@ -1,4 +1,5 @@
 name: OS-1 Oscilloscope Project
+baseurl: /os
 
 defaults:
   -
