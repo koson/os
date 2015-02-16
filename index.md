@@ -13,6 +13,16 @@ might be "stretch goals":
 * Programmable digital trigger
 * Segmented memory
 
+## Updates
+<ul>
+  {% for post in site.posts %}
+    <li>
+        {{ post.date | date: "%Y-%m-%d" }} :: <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
+
 ## Backplane
 The OS-1 will be based on a backplane for modularity and upgrade capability.
 
