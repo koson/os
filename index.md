@@ -17,10 +17,12 @@ might be "stretch goals":
 The OS-1 will be based on a backplane for modularity and upgrade capability.
 
 Read more:
+
 [![3D render](https://raw.githubusercontent.com/cpavlina/os/master/Backplane/renders/3d-small.png)](backplane.html)
 
 ## Frontend
 The analog frontend is still in the very early stage of design.
 
 Read more:
+
 [![Frontend block diagram](https://raw.githubusercontent.com/cpavlina/os/master/Frontend/Planning/BlockDiag.png)](frontend.html)
