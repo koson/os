@@ -1,12 +1,14 @@
 body {
   margin: 0;
   padding: 0;
-  background: #151515 url("../images/bkg.png") 0 0;
-  color: #eaeaea;
-  font: 16px;
-  line-height: 1.5;
-  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-  font-size: 10pt;
+  font-family: Fenix, serif;
+/*
+//  background: #151515 url("../images/bkg.png") 0 0;
+//  color: #eaeaea;
+//  font: 16px;
+//  line-height: 1.5;
+//  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+//  font-size: 10pt; */
 }
 
 /* General & 'Reset' Stuff */
@@ -39,7 +41,7 @@ li {
 header {
   background: rgba(0, 0, 0, 0.1);
   width: 100%;
-  border-bottom: 1px dashed #b5e853;
+  border-bottom: 1px dashed #222222;
   padding: 20px 0;
   margin: 0 0 40px 0;
 }
@@ -47,21 +49,20 @@ header {
 header h1 {
   font-size: 30px;
   line-height: 1.5;
-  margin: 0 0 0 -40px;
+  /* margin: 0 0 0 -40px; */
+  margin: 0;
   font-weight: bold;
-  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-  color: #b5e853;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
-               0 0 5px rgba(181, 232, 83, 0.1),
-               0 0 10px rgba(181, 232, 83, 0.1);
+/*  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace; */
+  color: #222222;
   letter-spacing: -1px;
   -webkit-font-smoothing: antialiased;
 }
 
+/*
 header h1:before {
   content: "./ ";
   font-size: 24px;
-}
+}*/
 
 header h2 {
   font-size: 18px;
@@ -87,9 +88,10 @@ section img {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: normal;
-  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-  color: #b5e853;
+  font-weight: bold;
+  /* font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace; */
+  font-family: Oxygen, sans-serif;
+  color: #222222;
   letter-spacing: -0.03em;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
                0 0 5px rgba(181, 232, 83, 0.1),
@@ -136,9 +138,9 @@ ul li {
 
 ul li:before {
   content: ">>";
-  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  /* font-family: monospace; */
   font-size: 13px;
-  color: #b5e853;
+  color: #555555;
   margin-left: -37px;
   margin-right: 21px;
   line-height: 16px;
@@ -197,12 +199,12 @@ hr {
   border: 2px solid rgba(0, 0, 0, 0.7);
   border-bottom: 2px solid rgba(0, 0, 0, 0.7);
   border-top: 2px solid rgba(0, 0, 0, 1);
-  color: rgba(255, 255, 255, 0.8) !important;
-  font-family: Helvetica, Arial, sans-serif;
+  color: black !important; 
+  font-family: Oxygen, sans-serif;
   font-weight: bold;
   font-size: 13px;
   text-decoration: none;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.75);
+  /* text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.75); */
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
@@ -228,17 +230,17 @@ hr {
 */
 
 a {
-  color: #63c0f5;
+  color: #1531f5;
   text-shadow: 0 0 5px rgba(104, 182, 255, 0.5);
 }
 
 a:visited {
-    color: #c084c0;
+    color: #a000a0;
 }
 
 a.title {
     text-decoration: none;
-    color: #63c0f5 !important;
+    color: #1531f5 !important;
 }
 
 a.title:hover {
@@ -258,4 +260,19 @@ a.title:hover {
 
 .cf {
   zoom:1;
+}
+
+span.cc-icon {
+    margin: 0 0 0 0.5cm;
+}
+
+footer {
+    margin: 6mm 3mm 6mm 3mm;
+    text-align: center;
+    font-size: 10pt;
+    border-top: 1px solid #555555;
+}
+
+.padded {
+    margin-right: 6mm;
 }
