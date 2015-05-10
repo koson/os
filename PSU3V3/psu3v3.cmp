@@ -1,0 +1,157 @@
+Cmp-Mod V01 Created by Cvpcb (after 2015-mar-04 BZR unknown)-product   date = Sat 11 Apr 2015 01:52:26 PM EDT
+
+BeginCmp
+TimeStamp = /5529ABE6;
+Reference = C1;
+ValeurCmp = 22u;
+IdModule  = IPC7351-Nominal:CAPAE660X570;
+EndCmp
+
+BeginCmp
+TimeStamp = /55296729;
+Reference = C2;
+ValeurCmp = 10n;
+IdModule  = IPC7351-Nominal:CAPC2012X70;
+EndCmp
+
+BeginCmp
+TimeStamp = /5529A7EF;
+Reference = C3;
+ValeurCmp = 22u;
+IdModule  = IPC7351-Nominal:CAPAE660X570;
+EndCmp
+
+BeginCmp
+TimeStamp = /5529B0CB;
+Reference = C4;
+ValeurCmp = 6u8;
+IdModule  = IPC7351-Nominal:CAPC3225X88;
+EndCmp
+
+BeginCmp
+TimeStamp = /55299DF1;
+Reference = C5;
+ValeurCmp = 150u;
+IdModule  = IPC7351-Nominal:CAPAE1030X1250;
+EndCmp
+
+BeginCmp
+TimeStamp = /5529ADA9;
+Reference = C6;
+ValeurCmp = 22u;
+IdModule  = IPC7351-Nominal:CAPC3216X70;
+EndCmp
+
+BeginCmp
+TimeStamp = /55298723;
+Reference = D1;
+ValeurCmp = STPS10L25G;
+IdModule  = smd-semi:TO-263;
+EndCmp
+
+BeginCmp
+TimeStamp = /55299230;
+Reference = J1;
+ValeurCmp = IN;
+IdModule  = conn-100mil:CONN-100MIL-M-1x4;
+EndCmp
+
+BeginCmp
+TimeStamp = /55296F62;
+Reference = J2;
+ValeurCmp = OUT;
+IdModule  = conn-100mil:CONN-100MIL-M-1x8;
+EndCmp
+
+BeginCmp
+TimeStamp = /552999D9;
+Reference = L1;
+ValeurCmp = 1u;
+IdModule  = manuf:BOURNS-SRR1210;
+EndCmp
+
+BeginCmp
+TimeStamp = /5529961A;
+Reference = L2;
+ValeurCmp = 8u2;
+IdModule  = manuf:BOURNS-SRP1238A;
+EndCmp
+
+BeginCmp
+TimeStamp = /55299854;
+Reference = L3;
+ValeurCmp = 8u2;
+IdModule  = manuf:BOURNS-SRP1238A;
+EndCmp
+
+BeginCmp
+TimeStamp = /55299C22;
+Reference = L4;
+ValeurCmp = 1u;
+IdModule  = manuf:BOURNS-SRR1210;
+EndCmp
+
+BeginCmp
+TimeStamp = /5529BA43;
+Reference = Q1;
+ValeurCmp = AOD417;
+IdModule  = smd-semi:TO-252;
+EndCmp
+
+BeginCmp
+TimeStamp = /5529BCB2;
+Reference = Q2;
+ValeurCmp = IPD50P04P4L-11;
+IdModule  = smd-semi:TO-252;
+EndCmp
+
+BeginCmp
+TimeStamp = /55297CB4;
+Reference = Q3;
+ValeurCmp = MMUN2231L;
+IdModule  = smd-semi:SOT-23;
+EndCmp
+
+BeginCmp
+TimeStamp = /55297E66;
+Reference = Q4;
+ValeurCmp = MMUN2231L;
+IdModule  = smd-semi:SOT-23;
+EndCmp
+
+BeginCmp
+TimeStamp = /5529743A;
+Reference = R1;
+ValeurCmp = 10k;
+IdModule  = IPC7351-Nominal:RESC2012X50;
+EndCmp
+
+BeginCmp
+TimeStamp = /5529694C;
+Reference = R2;
+ValeurCmp = 1k54;
+IdModule  = IPC7351-Nominal:RESC2012X50;
+EndCmp
+
+BeginCmp
+TimeStamp = /552970E9;
+Reference = R3;
+ValeurCmp = 3k3;
+IdModule  = IPC7351-Nominal:RESC2012X50;
+EndCmp
+
+BeginCmp
+TimeStamp = /552969F2;
+Reference = R4;
+ValeurCmp = 978;
+IdModule  = IPC7351-Nominal:RESC2012X50;
+EndCmp
+
+BeginCmp
+TimeStamp = /5529653F;
+Reference = U1;
+ValeurCmp = LM22676QTJ-ADJ;
+IdModule  = manuf:TO-263-7-TEXAS;
+EndCmp
+
+EndListe
