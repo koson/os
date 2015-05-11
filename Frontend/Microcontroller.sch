@@ -294,30 +294,6 @@ F 3 "" H 2500 2600 60  0000 C CNN
 	1    2500 2600
 	1    0    0    -1  
 $EndComp
-Text Notes 1400 3300 0    60   ~ 0
-GPIO
-Text Notes 1400 3700 0    60   ~ 0
-GPIO
-Text Notes 1400 3800 0    60   ~ 0
-GPIO
-Text Notes 1400 4200 0    60   ~ 0
-GPIO
-Text Notes 1400 5200 0    60   ~ 0
-GPIO
-Text Notes 3400 5000 0    60   ~ 0
-GPIO
-Text Notes 3400 5100 0    60   ~ 0
-GPIO
-Text Notes 3400 5200 0    60   ~ 0
-GPIO
-Text Notes 3400 5300 0    60   ~ 0
-GPIO
-Text Notes 1400 5300 0    60   ~ 0
-GPIO
-Text Notes 1400 5400 0    60   ~ 0
-GPIO
-Text Notes 3400 3900 0    60   ~ 0
-GPIO
 Text Label 3400 4200 0    50   ~ 0
 #CSDAC
 Text Label 3400 4700 0    50   ~ 0
@@ -701,17 +677,17 @@ Wire Wire Line
 Wire Wire Line
 	9500 4000 9400 4000
 Wire Wire Line
-	8100 3300 8400 3300
+	7900 3300 8400 3300
 Wire Wire Line
-	8100 3400 8400 3400
+	7900 3400 8400 3400
 Wire Wire Line
-	8100 3500 8400 3500
+	7900 3500 8400 3500
 Wire Wire Line
-	8100 3600 8400 3600
+	7900 3600 8400 3600
 Wire Wire Line
-	8100 3700 8400 3700
+	7900 3700 8400 3700
 Wire Wire Line
-	8100 3800 8400 3800
+	7900 3800 8400 3800
 Wire Wire Line
 	9500 3100 9400 3100
 Wire Wire Line
@@ -920,9 +896,9 @@ U 5550176D
 F0 "LevelShifters" 60
 F1 "LevelShifters.sch" 60
 F2 "VREF_IN" I L 8300 1300 50 
-F3 "VOS1_CH1_IN" I L 8300 1600 50 
+F3 "VOS1_CH1_IN" I L 8300 1800 50 
 F4 "VOS2_CH1_IN" I L 8300 1700 50 
-F5 "VOS3_CH1_IN" I L 8300 1800 50 
+F5 "VOS3_CH1_IN" I L 8300 1600 50 
 F6 "VOS1_CH2_IN" I L 8300 1900 50 
 F7 "VOS2_CH2_IN" I L 8300 2000 50 
 F8 "VOS3_CH2_IN" I L 8300 2100 50 
@@ -935,18 +911,6 @@ F14 "VOS3_CH2_OUT" O R 9600 2100 50
 $EndSheet
 Wire Wire Line
 	8300 1300 7900 1300
-Wire Wire Line
-	7900 1600 8300 1600
-Wire Wire Line
-	7900 1700 8300 1700
-Wire Wire Line
-	7900 1800 8300 1800
-Wire Wire Line
-	7900 1900 8300 1900
-Wire Wire Line
-	7900 2000 8300 2000
-Wire Wire Line
-	7900 2100 8300 2100
 Text HLabel 9900 1600 2    50   Output ~ 0
 VOS1_CH1
 Text HLabel 9900 1700 2    50   Output ~ 0
@@ -1036,14 +1000,6 @@ Wire Wire Line
 	4600 1000 4750 1000
 Text Label 5800 1000 0    50   ~ 0
 3V3DAC
-Text Notes 3400 3800 0    60   ~ 0
-GPIO
-Text Notes 3400 3700 0    60   ~ 0
-GPIO
-Text Notes 3400 3500 0    60   ~ 0
-GPIO
-Text Notes 3400 2700 0    50   ~ 0
-ADC
 $Comp
 L C-TANT-3528-21 C37
 U 1 1 55526688
@@ -1056,8 +1012,6 @@ F 4 "#CAP TANT 15u 16V [3528]" H 1000 1100 60  0001 C CNN "BOM"
 	1    1000 1100
 	1    0    0    -1  
 $EndComp
-Text Notes 3400 2800 0    50   ~ 0
-ADC
 Text Notes 3400 2900 0    50   ~ 0
 ADC
 Text Notes 3400 3000 0    50   ~ 0
@@ -1233,20 +1187,121 @@ F 3 "" H 1550 1250 60  0000 C CNN
 $EndComp
 Wire Wire Line
 	1550 1250 1550 1200
-Text HLabel 9900 4500 2    50   Output ~ 0
+Text HLabel 3700 4500 2    50   Output ~ 0
 CH1_ATT2
-Text HLabel 9900 4600 2    50   Output ~ 0
+Text HLabel 3700 4400 2    50   Output ~ 0
 CH1_GAIN1
-Text HLabel 9900 4700 2    50   Output ~ 0
+Text HLabel 3700 4600 2    50   Output ~ 0
 CH1_GAIN2
-Text HLabel 9900 4900 2    50   Output ~ 0
+Text HLabel 1600 5200 0    50   Output ~ 0
 CH2_ATT2
-Text HLabel 9900 5000 2    50   Output ~ 0
+Text HLabel 1600 4200 0    50   Output ~ 0
 CH2_GAIN1
-Text HLabel 9900 5100 2    50   Output ~ 0
+Text HLabel 1600 3800 0    50   Output ~ 0
 CH2_GAIN2
-Text HLabel 9900 5400 0    50   Input ~ 0
+Text HLabel 3400 2800 2    50   Input ~ 0
 CH1_TEMP
-Text HLabel 9900 5500 0    50   Input ~ 0
+Text HLabel 3400 2700 2    50   Input ~ 0
 CH2_TEMP
+$Comp
+L C-0603 C113
+U 1 1 5551B6DA
+P 6100 1250
+F 0 "C113" H 5900 1200 50  0000 C CNN
+F 1 "100n" H 5900 1300 50  0000 C CNN
+F 2 "IPC7351-Nominal:CAPC1608X55" H 6100 1250 50  0001 C CNN
+F 3 "" H 6090 1225 60  0000 C CNN
+F 4 "Value" H 6100 1250 60  0001 C CNN "Manuf"
+F 5 "CAP MLCC 100pF C0G 50V 5% [0603]" H 6900 1800 60  0001 C CNN "BOM"
+	1    6100 1250
+	-1   0    0    1   
+$EndComp
+$Comp
+L +3.3 #PWR0169
+U 1 1 5551B75B
+P 6100 1150
+F 0 "#PWR0169" H 6100 1200 30  0001 C CNN
+F 1 "+3.3" H 6100 1250 50  0000 C CNN
+F 2 "" H 6100 1150 60  0000 C CNN
+F 3 "" H 6100 1150 60  0000 C CNN
+	1    6100 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR0170
+U 1 1 5551B7C1
+P 6100 1400
+F 0 "#PWR0170" H 6100 1400 30  0001 C CNN
+F 1 "GND" H 6100 1330 30  0001 C CNN
+F 2 "" H 6100 1400 60  0000 C CNN
+F 3 "" H 6100 1400 60  0000 C CNN
+	1    6100 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 1400 6100 1350
+Wire Wire Line
+	8300 1600 7900 1600
+Wire Wire Line
+	8300 1700 7900 1700
+Wire Wire Line
+	8300 1800 7900 1800
+Wire Wire Line
+	7900 1900 8300 1900
+Wire Wire Line
+	7900 2000 8300 2000
+Wire Wire Line
+	7900 2100 8300 2100
+Text Label 7900 3300 0    50   ~ 0
+CH1_TERM
+Text Label 7900 3400 0    50   ~ 0
+CH1_DC
+Text Label 7900 3500 0    50   ~ 0
+CH1_ATT1
+Text Label 7900 3600 0    50   ~ 0
+CH2_TERM
+Text Label 7900 3700 0    50   ~ 0
+CH2_DC
+Text Label 7900 3800 0    50   ~ 0
+CH2_ATT1
+Text Label 3800 3900 2    50   ~ 0
+CH2_ATT1
+Wire Wire Line
+	3800 3900 3300 3900
+Text Label 3800 3800 2    50   ~ 0
+CH2_DC
+Wire Wire Line
+	3800 3800 3300 3800
+Text Label 3800 3700 2    50   ~ 0
+CH2_TERM
+Wire Wire Line
+	3800 3700 3300 3700
+Text Label 3800 5000 2    50   ~ 0
+CH1_ATT1
+Wire Wire Line
+	3800 5000 3300 5000
+Text Label 3800 5100 2    50   ~ 0
+CH1_DC
+Text Label 3800 5200 2    50   ~ 0
+CH1_TERM
+Wire Wire Line
+	3800 5200 3300 5200
+Wire Wire Line
+	3800 5100 3300 5100
+Wire Wire Line
+	3700 4600 3300 4600
+Wire Wire Line
+	3700 4500 3300 4500
+Wire Wire Line
+	3700 4400 3300 4400
+Wire Wire Line
+	3400 2800 3300 2800
+Wire Wire Line
+	3400 2700 3300 2700
+Wire Wire Line
+	1600 5200 1700 5200
+Wire Wire Line
+	1600 3800 1700 3800
+Wire Wire Line
+	1600 4200 1700 4200
 $EndSCHEMATC
