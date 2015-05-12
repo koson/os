@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (after 2015-may-01 BZR unknown)-product   date = Sun 10 May 2015 04:56:01 PM EDT
+Cmp-Mod V01 Created by Cvpcb (after 2015-may-01 BZR unknown)-product   date = Mon 11 May 2015 08:06:46 PM EDT
 
 BeginCmp
 TimeStamp = /552E2A83/5554B442;
@@ -1086,7 +1086,7 @@ IdModule  = manuf:HAMLIN-HE3600;
 EndCmp
 
 BeginCmp
-TimeStamp = /552F27A6/5547D192;
+TimeStamp = /552F27A6/55503A38;
 Reference = MP1;
 ValeurCmp = 217-36CTE6;
 IdModule  = manuf:LAIRD-BMI-S-203;
@@ -1992,7 +1992,7 @@ BeginCmp
 TimeStamp = /552B011F/552D08AF;
 Reference = TP1;
 ValeurCmp = INFO;
-IdModule  = ;
+IdModule  = conn-test:TEST-SMD-SMALL;
 EndCmp
 
 BeginCmp
