@@ -74,6 +74,8 @@ LIBS:Atmel
 LIBS:AnalogDevices
 LIBS:Altera
 LIBS:conn-te
+LIBS:Vishay
+LIBS:semi-trans-OnSemi
 LIBS:frontend-cache
 EELAYER 25 0
 EELAYER END
@@ -127,12 +129,12 @@ $EndComp
 $Comp
 L TESTPOINT TP1
 U 1 1 552D08AF
-P 4100 3800
-F 0 "TP1" V 3900 3950 50  0000 C CNN
-F 1 "INFO" V 4000 3950 50  0000 C CNN
-F 2 "conn-test:TEST-SMD-SMALL" H 4100 3800 50  0001 C CNN
-F 3 "" H 4100 3800 50  0000 C CNN
-	1    4100 3800
+P 4400 3800
+F 0 "TP1" V 4200 3950 50  0000 C CNN
+F 1 "INFO" V 4300 3950 50  0000 C CNN
+F 2 "conn-test:TEST-SMD-SMALL" H 4400 3800 50  0001 C CNN
+F 3 "" H 4400 3800 50  0000 C CNN
+	1    4400 3800
 	0    1    1    0   
 $EndComp
 Text HLabel 1700 6850 0    50   Input ~ 0
@@ -604,7 +606,7 @@ F 3 "" H 3650 1550 60  0000 C CNN
 	1    3650 1550
 	1    0    0    -1  
 $EndComp
-Text HLabel 1500 6300 0    50   Output ~ 0
+Text HLabel 4100 3500 2    50   Output ~ 0
 #IRQ
 $Comp
 L +3.3 #PWR0164
@@ -1527,7 +1529,7 @@ Connection ~ 5600 2200
 Wire Wire Line
 	5600 1850 5600 1900
 Wire Wire Line
-	4100 3800 3800 3800
+	4400 3800 3800 3800
 Wire Wire Line
 	1700 6850 4300 6850
 Wire Wire Line
@@ -1957,8 +1959,6 @@ Wire Wire Line
 	7800 2200 8200 2200
 Wire Wire Line
 	8200 2300 7800 2300
-NoConn ~ 3800 3500
-NoConn ~ 3800 3600
 NoConn ~ 3800 3700
 NoConn ~ 2200 3500
 NoConn ~ 2200 3900
@@ -1993,6 +1993,10 @@ F 3 "" H 5550 1200 60  0000 C CNN
 	1    5550 1200
 	1    0    0    -1  
 $EndComp
-Text HLabel 1500 6400 0    50   Input ~ 0
+Text HLabel 4100 3600 2    50   Input ~ 0
 #PERST
+Wire Wire Line
+	4100 3500 3800 3500
+Wire Wire Line
+	4100 3600 3800 3600
 $EndSCHEMATC

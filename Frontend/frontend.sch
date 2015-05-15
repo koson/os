@@ -74,6 +74,8 @@ LIBS:Atmel
 LIBS:AnalogDevices
 LIBS:Altera
 LIBS:conn-te
+LIBS:Vishay
+LIBS:semi-trans-OnSemi
 LIBS:frontend-cache
 EELAYER 25 0
 EELAYER END
@@ -143,6 +145,7 @@ F27 "CH1_TEMP" I R 5100 6100 50
 F28 "CH2_TEMP" I R 5100 6000 50 
 F29 "TEMP_VRELAY" I L 3800 3800 50 
 F30 "TEMP_V5" I L 3800 3900 50 
+F31 "#PERST" I L 3800 4900 50 
 $EndSheet
 $Sheet
 S 1700 1600 1000 1000
@@ -574,7 +577,7 @@ Wire Wire Line
 Wire Wire Line
 	2400 4600 3800 4600
 Wire Wire Line
-	2750 4900 2400 4900
+	2400 4900 3800 4900
 Wire Wire Line
 	1900 5200 1800 5200
 Wire Wire Line

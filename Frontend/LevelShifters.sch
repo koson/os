@@ -74,6 +74,8 @@ LIBS:Atmel
 LIBS:AnalogDevices
 LIBS:Altera
 LIBS:conn-te
+LIBS:Vishay
+LIBS:semi-trans-OnSemi
 LIBS:frontend-cache
 EELAYER 25 0
 EELAYER END
