@@ -81,7 +81,7 @@ EELAYER 25 0
 EELAYER END
 $Descr User 14235 11000
 encoding utf-8
-Sheet 3 6
+Sheet 2 6
 Title "Frontend Channel"
 Date "2015-05-10"
 Rev ""
