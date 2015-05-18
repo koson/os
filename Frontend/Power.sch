@@ -83,9 +83,9 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 6 6
 Title "Voltage regulators"
-Date "2015-05-15"
-Rev ""
-Comp ""
+Date "2015-05-17"
+Rev "A"
+Comp "c4757p"
 Comment1 ""
 Comment2 ""
 Comment3 ""

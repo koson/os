@@ -81,11 +81,11 @@ EELAYER 25 0
 EELAYER END
 $Descr USLetter 11000 8500
 encoding utf-8
-Sheet 4 6
+Sheet 5 6
 Title "Analog level shifters"
-Date "2015-05-15"
-Rev ""
-Comp ""
+Date "2015-05-17"
+Rev "A"
+Comp "c4757p"
 Comment1 ""
 Comment2 ""
 Comment3 ""
