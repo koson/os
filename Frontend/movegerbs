@@ -1,0 +1,11 @@
+#!/bin/bash
+
+rm -rf gerbers gerbers-elecrow.zip
+mkdir gerbers
+gerb copy . gerbers elecrow
+zip -r gerbers-elecrow.zip gerbers
+
+rm -rf gerbers gerbers-gerblook.zip
+mkdir gerbers
+gerb move . gerbers gerblook
+zip -r gerbers-gerblook.zip gerbers
